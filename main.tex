@@ -16,6 +16,26 @@
 \usepackage{subcaption}
 \usepackage{comment}
 \usepackage{pdfpages}
+\usepackage[useregional]{datetime2}
+\usepackage{amsmath} % for the equation* environment
+\usepackage{float}
+\usepackage{pict2e}
+\usepackage{fixltx2e}
+
+\DeclareRobustCommand{\slashcirc}{{\mathpalette\doslashcirc\relax}}
+
+\makeatletter
+\newcommand\doslashcirc[2]{%
+  \sbox\z@{$#1\m@th\circ$}%
+  \setlength\unitlength{\wd\z@}
+  \begin{picture}(1,1)
+  \roundcap
+  \put(0,0){\box\z@}
+  \put(0,0){\line(1,1){1}}
+  \end{picture}%
+}
+\makeatother
+
 
 % %% Some packages you will need
 % \usepackage{pgfplots}
@@ -119,20 +139,20 @@
 \begin{document}
 \include{main/front}
 \maketitle
-\include{information/Versie Historie}
+\include{chapters/01_Versiehistorie}
 \include{information/Begrippenlijst}
 \include{information/Figurenlijst}
 \include{main/inhouds}
-\include{chapters/01_Achtergrond.tex}
-\include{chapters/02_De_projectopdracht.tex}
-\include{chapters/03_Projectactiviteiten.tex}
-\include{chapters/04_Projectgrenzen.tex}
-\include{chapters/05_De_producten.tex}
-\include{chapters/06_Kwaliteit.tex}
-\include{chapters/07_De_projectorganisatie.tex}
-\include{chapters/08_Planning.tex}
-\include{chapters/09_Kosten_en_Opbrengsten.tex}
-\include{chapters/10_Risicos.tex}
+% \include{chapters/02_Voorwoord}
+% \include{chapters/03_Samenvatting}
+% \include{chapters/04_Verklarende_woordenlijst}
+% \include{chapters/05_Opdracht_Analyse}
+% \include{chapters/06_Programma van eisen}
+\include{chapters/07_Wat zijn de belangrijke aspecten van de Kavels VI en VII?}
+\include{chapters/08_Welke twee type windturbines zijn het meest geschikt voor het windpark en waarom?}
+% \include{chapters/09_Wat is de beste positionering van de windturbines voor optimale opbrengst, efficiënte bekabeling en makkelijker onderhoud?}
+% \include{chapters/10_Risicos}
+% \include{chapters/11_Verdeling}
 % \include{chapters/11_Verdeling}
 \include{information/Bronnelijst}
 \end{document}
