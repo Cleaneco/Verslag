@@ -21,6 +21,14 @@
 \usepackage{float}
 \usepackage{pict2e}
 \usepackage{fixltx2e}
+\usepackage{tocloft}
+
+%%gmedina solution
+\newcommand{\listequationsname}{Lijst van berekeningen}
+\newlistof{myequations}{equ}{\listequationsname}
+\newcommand{\myequations}[1]{%
+\addcontentsline{equ}{myequations}{\protect\numberline{\theequation}#1}\par}
+\setlength{\cftmyequationsnumwidth}{2.5em}% Width of equation number in List of Equations
 
 \DeclareRobustCommand{\slashcirc}{{\mathpalette\doslashcirc\relax}}
 
@@ -139,7 +147,7 @@
 \begin{document}
 \include{main/front}
 \maketitle
-\include{chapters/01_Versiehistorie}
+% \include{chapters/01_Versiehistorie}
 \include{information/Begrippenlijst}
 \include{information/Figurenlijst}
 \include{main/inhouds}

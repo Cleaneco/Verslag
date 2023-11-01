@@ -35,10 +35,12 @@ Van de uitgekozen windturbines zijn meerdere gegevens verzameld, waaronder de di
 % \text{12MW Turbine geeft: } \pi*(\slashcirc/2)^2 = \pi*(222/2)^2 = 38707
 \text{12MW Turbine geeft: } A =\pi*(\frac{\slashcirc_{12MW}}{2})^2 = \pi*(\frac{222}{2})^2 = 38707 m^2
 \end{equation}
+\myequations{Berekening: A 12MW Turbine}
 
 \begin{equation} \label{eq:2}
 \text{18MW Turbine geeft: } A =\pi*(\frac{\slashcirc_{18MW}}{2})^2 = \pi*(\frac{263}{2})^2 = 54325 m^2
 \end{equation}
+\myequations{Berekening: A 18MW Turbine}
 
 De diameter van de twee turbines verschilt, vanwege de kwadratische berekening die gepaard gaat met het berekenen van de oppervlakte, is het effect hiervan groter terug te zien in het rotoroppervlak.
 \subsubsection{Theoretisch vermogen}
@@ -47,9 +49,12 @@ Met het rotoroppervlak van de turbines is het theoretische vermogen dat uit de w
 \begin{equation} \label{eq:3}
     P_{wind12MW} = \frac{1}{2}*1.29*A_{12MW}*v_{wind}^3 = \frac{1}{2}*1.29*38707*v_{wind}^3
 \end{equation}
+\myequations{Berekening: Pwind 12MW Turbine}
+
 \begin{equation} \label{eq:4}
     P_{wind18MW} = \frac{1}{2}*1.29*A_{18MW}*v_{wind}^3 = \frac{1}{2}*1.29*54325*v_{wind}^3
 \end{equation}
+\myequations{Berekening: Pwind 18MW Turbine}
 
 \subsubsection{Tussenberekeningen}
 De snelheid van de wind op de kavels is variërend, deze formules zijn dus toegepast voor realistische en te verwachten windsnelheden gebaseerd op de windgegevens over een periode van twee jaar.\cite{WindResourceAssessment} 
@@ -82,15 +87,21 @@ Elke windturbine heeft een vermogensfactor (Cp). Door het windvermogen te vermen
 \begin{equation} \label{eq:5}
 \text{Werkelijk vermogen 12MW turbine: } P_{r12MW}=Cp_{12MW}*P_{wind12MW}
 \end{equation}
-\begin{equation} \label{6}
+\myequations{Berekening: Werkelijk vermogen 12MW turbine}
+
+\begin{equation} \label{eq:6}
 \text{Werkelijk vermogen 18MW turbine: } P_{r18MW}=Cp_{18MW}*P_{wind18MW}
 \end{equation}
+\myequations{Berekening: Werkelijk vermogen 18MW turbine}
+
 \subsubsection{Wind data}
 Uit de Wind Resource Assessment\cite{WindResourceAssessment} is de benodigde winddata gehaald. Hieronder valt ook informatie over de frequentie van gemeten windsnelheden gedurende een periode van twee jaar. Deze frequentie kan gebruikt worden als de kans op de windsnelheid. Met formule \ref{eq:7} kan berekend worden hoeveel uur een windsnelheid per jaar zal plaatsvinden als deze overeen komt met de bepaalde kans. In onderstaande formule (\ref{eq:7}) staat X voor de kans / het percentage dat de windsnelheid voorkomt in een jaar. 
 
 \begin{equation} \label{eq:7}
 \text{Frequentie windsnelheid in uren/jaar: } 365*24*X 
 \end{equation}
+\myequations{Berekening: Frequentie windsnelheid}
+
 
 De verdeling van de frequentie van de windsnelheden over de span van de gemeten periode\cite{WindResourceAssessment} staat in (figuur \ref{fig:Frequentieverdeling}). 
 \begin{figure}[H]
@@ -106,9 +117,12 @@ Door de verdeling van het aantal uur dat de windsnelheden voorkomen in een jaar 
 \begin{equation} \label{eq:8}
 \text{12MW Turbine: } E_{opbrengst,12MW}=t_{uren per jaar}*P_{r12MW}
 \end{equation}
+\myequations{Berekening: Energie Opbrengst 12MW Turbine}
+
 \begin{equation} \label{eq:9}
 \text{18MW Turbine: } E_{opbrengst,18MW}=t_{uren per jaar}*P_{r18MW}
 \end{equation}
+\myequations{Berekening: Energie Opbrengst 18MW Turbine}
 
 De uitkomsten hiervan zijn in (tabel \ref{fig:Jaaropbrengst}) genoteerd. Nu kan de jaaropbrengst berekend worden voor beide turbines, door de uitkomsten van dezelfde turbine bij elkaar op te tellen. Hieruit is gekomen dat de jaaropbrengst met de 18MW turbine overeen komt met 94.850.015 kWh, en met de 12MW turbine overeen komt met 53.715.367 kWh. Dit verschil is behoorlijk en geeft duidelijk aan hoezo de 18MW windturbine veel voordeliger en aantrekkelijker is om te gebruiken. 
 \begin{figure}[H]
@@ -119,7 +133,7 @@ De uitkomsten hiervan zijn in (tabel \ref{fig:Jaaropbrengst}) genoteerd. Nu kan 
 \end{figure}
 Bij deze jaarlijkse energieopbrengst is echter nog geen rekening gehouden met een aantal factoren die in de werkelijkheid een rol spelen, zoals het parkeffect. Om de jaarlijkse energieopbrengst inclusief het parkeffect te bepalen moet eerst het parkeffect berekend worden. Het parkeffect kan vervolgens vermenigvuldigd worden met de jaarlijkse energieopbrengst exclusief parkeffect, om de daadwerkelijke jaarlijkse energieopbrengst te krijgen. 
 
-\subsection{Parkeffect}
+\subsubsection{Parkeffect}
 Om dit parkeffect te berekenen, zijn een aantal tussenstappen gemaakt, waarbij verschillende berekeningen gemaakt zijn. De berekeningen moeten worden uitgevoerd voor beide kavels. Er is echter nog niet genoeg informatie gevonden over de oppervlaktes van de individuele kavels. Hier zal voor het volgende tussenrapportagemoment nog meer onderzoek naar gedaan worden. Voor nu is echter de oppervlakte van beide kavels bepaald door de oppervlakte van het windpark (176km\textsuperscript{2}) te delen door twee. Hierdoor is de oppervlakte voor beide kavels op het moment dus hetzelfde (88km\textsuperscript{2}), en verschilt er dus niks tussen de kavels. 
 
 Om het parkeffect te berekenen zijn de volgende gegevens van belang: 
@@ -142,20 +156,37 @@ Stap drie is het bepalen van de vermogensdichtheid. Om dit te berekenen kan de v
 \begin{equation} \label{eq:10}
 \text{18MW Turbine: } P_{dichtheid18MW}=(\frac{n_{turbines}*P_{turbine}}{A_{oppervlak}}) = (\frac{48*18}{88}) = 9,818 MW/km\textsuperscript{2}
 \end{equation}
+\myequations{Berekening: P Dichtheid 18MW Turbine}
 
 Vervolgens kan met de vermogensdichtheid het parkeffect berekend worden. Dit wordt gedaan met formule \ref{eq:11}. 
 
 \begin{equation} \label{eq:11}
  Parkeffect_{18MW}=\frac{100-(\frac{n_{turbines}*P_{turbine}}{A})}{100} = \frac{100-P_{totaal}}{100}
 \end{equation}
+\myequations{Berekening: Parkeffect 18MW Turbine}
 
-Het parkeffect varieert afhankelijk van de vermogensdichtheid. Deze is op zijn beurt weer afhankelijk van meerdere factoren. De berekende waardes van het parkeffect voor verschillende aantallen turbines staan in tabel... is geplot in (figuur...). 
+Het parkeffect varieert afhankelijk van de vermogensdichtheid. Deze is op zijn beurt weer afhankelijk van meerdere factoren. De berekende waardes van het parkeffect voor verschillende aantallen turbines staan in figuur \ref{fig:Parkeffect_table} is geplot in (figuur \ref{fig:ParkEffectGraph}). 
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=1\textwidth]{IMG/data/overzicht/Parkeffect.PNG}
+\caption{Gegevens: Aantal turbines, Parkeffect, Swept Area en Opbrengst park effect.}
+\label{fig:Parkeffect_table}
+\end{figure}
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.7\textwidth]{IMG/data/overzicht/parkeffect_graph.PNG}
+\caption{Plot: Parkeffect.}
+\label{fig:ParkEffectGraph}
+\end{figure}
 
 Ten slotte kan met het parkeffect het daadwerklijke vermogen bepaald worden. Dit kan berekend worden door het parkeffect te berekenen voor het aantal turbines dat op de kavel komt. In dit geval gaat het om 48 turbines. Dus is het parkeffect: 
 
-\begin{equation} \label{eq:11}
- Parkeffect_{18MW} = \frac{100-P_{totaal}}{100} = \frac{100-864}{100} = 0,902 = 90,2\%
+\begin{equation} \label{eq:12}
+ Parkeffect_{18MW} = \frac{100-(P_{totaal}/A)}{100} = \frac{100-(864/88)}{100} = 0,902 = 90,2\%
 \end{equation}
+\myequations{Berekening: Parkeffect 18MW Turbine doorgerekend}
 
 De jaarlijkse energieopbrengst inclusief het parkeffect is dan vrij simpel te berekenen met de formule: 
 % \begin{equation} \label{eq:6}
@@ -166,38 +197,41 @@ De jaarlijkse energieopbrengst inclusief het parkeffect is dan vrij simpel te be
 % \end{equation}
 
 
-\begin{equation} \label{12}
-\text{18MW Turbine: } OpbrengstParkeffect_{18MW}=Parkeffect_{18MW}*Jaaropbgrengst_{18MW}
+\begin{equation} \label{13}
+\text{18MW Turbine: } OpbrengstParkeffect_{18MW}=Parkeffect_{18MW}*E_{opbrengst,18MW} 
 \end{equation}
+\myequations{Berekening: Opbrengst Parkeffect 18MW Turbine}
 
-\begin{equation} \label{eq:13}
-\text{12MW Turbine geeft: } OpbrengstParkeffect_{12MW}=Parkeffect_{12MW}*Jaaropbgrengst_{12MW}
+\begin{equation} \label{14}
+OpbrengstParkeffect_{18MW}=0,902*94850015 = 85.554.713kWh 
 \end{equation}
+\myequations{Berekening: Opbrengst Parkeffect 18MW Turbine}
+
+\subsection{Configuratie 2 (12MW)}
+Voor configuratie 2 zijn de meeste berekeningen al uitgevoerd bij configuratie 1. Ook is het verschil duidelijk te zien in de figuren en is voor elke formule het alternatief gegeven voor de turbine van configuratie 2. 
+
+De energieopbrengst inclusief parkeffect zal hieronder worden berekend voor de windturbine van 12MW. 
+
+\begin{equation} \label{eq:15}
+ Parkeffect_{12MW} = \frac{100-(P_{totaal}/A)}{100} = \frac{100-((60*12)/88)}{100} = 0,918 = 91,8\%
+\end{equation}
+\myequations{Berekening: Parkeffect 12MW Turbine doorgerekend}
+
+\begin{equation} \label{eq:16}
+OpbrengstParkeffect_{12MW}=Parkeffect_{12MW}*E_{opbrengst,12MW}
+\end{equation}
+\myequations{Berekening: Opbrengst Parkeffect 12MW Turbine}
+
+\begin{equation} \label{eq:17}
+OpbrengstParkeffect_{12MW}= 0,918*53715367 = 49.320.473 kWh
+\end{equation}
+\myequations{Berekening: Opbrengst Parkeffect 12MW Turbine}
+
+Het verschil in jaarlijkse energieopbrengst, inclusief parkeffect, tussen de twee configuraties is dus 85.554.713 - 49.320.473 = 36.234.240 kWh aan energie per jaar. Dat is een zeer aanzienlijk getal. Dit is ook terug te zien in figuur \ref{fig:OpbrengstPark}
 
 \begin{figure}[H]
 \centering
 \includegraphics[width=0.7\textwidth]{IMG/data/overzicht/OpbrengstPark_graph.PNG}
 \caption{Plot: OpbrengstPark.}
 \label{fig:OpbrengstPark}
-\end{figure}
-
-\begin{figure}[H]
-\centering
-\includegraphics[width=0.7\textwidth]{IMG/data/overzicht/parkeffect_graph.PNG}
-\caption{Plot: Parkeffect.}
-\label{fig:ParkEffectGraph}
-\end{figure}
-
-\begin{figure}[H]
-\centering
-\includegraphics[width=0.7\textwidth]{IMG/data/overzicht/SweptAera_graph.PNG}
-\caption{Plot: Swept Area.}
-\label{fig:SweptArea}
-\end{figure}
-
-\begin{figure}[H]
-\centering
-\includegraphics[width=1\textwidth]{IMG/data/overzicht/Parkeffect.PNG}
-\caption{Gegevens: Aantal turbines, Parkeffect, Swept Area en Opbrengst park effect.}
-\label{fig:Parkeffect_table}
 \end{figure}
