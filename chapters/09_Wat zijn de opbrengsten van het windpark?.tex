@@ -1,0 +1,245 @@
+
+\section{Berekeningen}
+\subsection{Algemene berekeningen}
+\subsubsection{Swept Area}
+Van de uitgekozen windturbines zijn meerdere gegevens verzameld, waaronder de diameter. Hiermee is het rotoroppervlakte (A(\(m^2\))) te berekenen zoals gedaan in formules \ref{eq:1} en \ref{eq:2}.
+\begin{equation} \label{eq:1}
+% \text{12MW Turbine geeft: } \pi\times (\slashcirc/2)^2 = \pi\times (222/2)^2 = 38707
+\text{12MW Turbine geeft: } A =\pi\times (\frac{\slashcirc_{12MW}}{2})^2 = \pi\times (\frac{222}{2})^2 = 38707 m^2
+\end{equation}
+\myequations{Berekening: A 12MW Turbine}
+
+\begin{equation} \label{eq:2}
+\text{18MW Turbine geeft: } A =\pi\times (\frac{\slashcirc_{18MW}}{2})^2 = \pi\times (\frac{263}{2})^2 = 54325 m^2
+\end{equation}
+\myequations{Berekening: A 18MW Turbine}
+
+De diameter van de twee turbines verschilt, vanwege de kwadratische berekening die gepaard gaat met het berekenen van de oppervlakte, is het effect hiervan groter terug te zien in het rotoroppervlak.
+
+\subsubsection{Theoretisch vermogen}
+Met het rotoroppervlak van de turbines is het theoretische vermogen dat uit de wind gehaald kan worden, te berekenen. Dit vermogen kan berekend worden met de formules \ref{eq:3} en \ref{eq:4} hieronder. 
+
+\begin{equation} \label{eq:3}
+    P_{wind12MW} = \frac{1}{2}\times 1.29\times A_{12MW}\times v_{wind}^3 = \frac{1}{2}\times 1.29\times 38707\times v_{wind}^3
+\end{equation}
+\myequations{Berekening: Pwind 12MW Turbine}
+
+\begin{equation} \label{eq:4}
+    P_{wind18MW} = \frac{1}{2}\times 1.29\times A_{18MW}\times v_{wind}^3 = \frac{1}{2}\times 1.29\times 54325\times v_{wind}^3
+\end{equation}
+\myequations{Berekening: Pwind 18MW Turbine}
+
+\subsubsection{Tussenberekeningen}
+De snelheid van de wind op de kavels is variërend, deze formules zijn dus toegepast voor realistische en te verwachten windsnelheden gebaseerd op de windgegevens over een periode van twintig jaar.\cite{WindData}
+De uitkomsten zijn in een tabel genoteerd en geplot zoals te zien in (figuur \ref{fig:TVUW}). In realiteit is dit theoretische vermogen niet volledig uit de wind te halen, er is namelijk sprake van het Betzlimiet. 
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=1\textwidth]{IMG/data/overzicht/TVUW.PNG}
+\caption{Gegevens: windsnelheid, energieopbrengst, vermogen en Cp}
+\label{fig:TVUW}
+\end{figure}
+
+\subsubsection{Cp}
+Elke windturbine heeft een vermogensfactor (Cp). Door het windvermogen te vermenigvuldigen met de Cp van de windturbine, wordt het werkelijk op te wekken vermogen verkregen. Ook de Cp is variabel, wat betekent dat het vermogen dat de turbine uit de wind kan halen ook zal verschillen afhankelijk van de windsnelheid. De plot van de Cp is te zien in (figuur \ref{fig:CpGraph}). De uitkomsten van de formules \ref{eq:5} en \ref{eq:6} zijn wederom genoteerd en geplot zoals te zien in (figuur \ref{fig:PrGraph}). 
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.7\textwidth]{IMG/data/overzicht/Cp_graph.PNG}
+\caption{Plot: Cp\textsubscript{18MW} en Cp\textsubscript{12MW}}
+\label{fig:CpGraph}
+\end{figure}
+\subsubsection{Pr}
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.7\textwidth]{IMG/data/overzicht/Pr_graph.PNG}
+\caption{Plot: Pr\textsubscript{18MW} en Pr\textsubscript{12MW}}
+\label{fig:PrGraph}
+\end{figure}
+
+
+\begin{equation} \label{eq:5}
+\text{Werkelijk vermogen 12MW turbine: } P_{r12MW}=Cp_{12MW}\times P_{wind12MW}
+\end{equation}
+\myequations{Berekening: Werkelijk vermogen 12MW turbine}
+
+\begin{equation} \label{eq:6}
+\text{Werkelijk vermogen 18MW turbine: } P_{r18MW}=Cp_{18MW}\times P_{wind18MW}
+\end{equation}
+\myequations{Berekening: Werkelijk vermogen 18MW turbine}
+
+\subsubsection{Energieopbrengst exclusief parkeffect}
+Door de verdeling van het aantal uur dat de windsnelheden voorkomen in een jaar en de berekende werkelijke vermogens van de windturbines te gebruiken, kan de jaarlijkse energieopbrengst worden berekend. Dit wordt gedaan met de volgende formules: 
+
+\begin{equation} \label{eq:8}
+\text{12MW Turbine: } E_{opbrengst,12MW}=t_{uren per jaar}\times P_{r12MW}
+\end{equation}
+\myequations{Berekening: Energie Opbrengst 12MW Turbine}
+
+\begin{equation} \label{eq:9}
+\text{18MW Turbine: } E_{opbrengst,18MW}=t_{uren per jaar}\times P_{r18MW}
+\end{equation}
+\myequations{Berekening: Energie Opbrengst 18MW Turbine}
+
+De uitkomsten hiervan zijn in (tabel \ref{fig:Jaaropbrengst}) genoteerd. Nu kan de jaaropbrengst berekend worden voor beide turbines, door de uitkomsten van dezelfde turbine bij elkaar op te tellen. Hieruit is gekomen dat de jaaropbrengst met de 18MW turbine overeen komt met 94.850.015 kWh, en met de 12MW turbine overeen komt met 53.715.367 kWh. Dit verschil is behoorlijk en geeft duidelijk aan hoezo de 18MW windturbine veel voordeliger en aantrekkelijker is om te gebruiken. 
+\begin{figure}[H]
+\centering
+\includegraphics[width=1\textwidth]{IMG/data/overzicht/Jaaropbrengst.PNG}
+\caption{Gegevens: Uren, Vermogens en Energieopbrengst.}
+\label{fig:Jaaropbrengst}
+\end{figure}
+Bij deze jaarlijkse energieopbrengst is echter nog geen rekening gehouden met een aantal factoren die in de werkelijkheid een rol spelen, zoals het parkeffect. Om de jaarlijkse energieopbrengst inclusief het parkeffect te bepalen moet eerst het parkeffect berekend worden. Het parkeffect kan vervolgens vermenigvuldigd worden met de jaarlijkse energieopbrengst exclusief parkeffect, om de daadwerkelijke jaarlijkse energieopbrengst te krijgen. 
+
+\subsubsection{Parkeffect}
+Om dit parkeffect te berekenen, zijn een aantal tussenstappen gemaakt, waarbij verschillende berekeningen gemaakt zijn. De berekeningen moeten worden uitgevoerd voor beide kavels. Er is echter nog niet genoeg informatie gevonden over de oppervlaktes van de individuele kavels. Hier zal voor het volgende tussenrapportagemoment nog meer onderzoek naar gedaan worden. Voor nu is echter de oppervlakte van beide kavels bepaald door de oppervlakte van het windpark (176km\textsuperscript{2}) te delen door twee. Hierdoor is de oppervlakte voor beide kavels op het moment dus hetzelfde (88km\textsuperscript{2}), en verschilt er dus niks tussen de kavels. 
+
+Om het parkeffect te berekenen zijn de volgende gegevens van belang: 
+\begin{itemize}
+    \item Aantal turbines per kavel
+    \item Totale vermogen per kavel
+    \item Oppervlakte kavel
+    \item Vermogensdichtheid 
+    \item Jaaropbrengst exclusief parkeffect
+\end{itemize}
+
+Ter vergelijking zijn deze berekeningen uitgevoerd voor beide windturbines. 
+
+\subsection{Configuratie 1 (18MW)}
+De eerste stap is het bepalen van het aantal turbines op de kavel. Volgens de eisen mag het totale rotoroppervlak niet groter zijn dan 2.624.613m\textsuperscript{2}, vanwege de grootte van het rotoroppervlak van de 18MW turbine, is de maximale hoeveelheid turbines die geplaatst kan worden volgens de eisen gelijk aan 48. 
+
+De tweede stap is het totale vermogen op de kavel bepalen. Dit is het aantal turbines maal het vermogen per turbine, dus \(48\times 18\) = 864MW. Vervolgens moet de oppervlakte van het windpark bepaald worden. Hiervoor is, zoals eerder vermeld, dezelfde waarde genomen voor beide kavels, namelijk 88km\textsuperscript{2} wateroppervlak. 
+
+Stap drie is het bepalen van de vermogensdichtheid. Om dit te berekenen kan de volgende formule gebruikt worden: 
+\begin{equation} \label{eq:10}
+\text{18MW Turbine: } P_{dichtheid18MW}=(\frac{n_{turbines}\times P_{turbine}}{A_{oppervlak}}) = (\frac{48\times 18}{88}) = 9,818 MW/km\textsuperscript{2}
+\end{equation}
+\myequations{Berekening: P Dichtheid 18MW Turbine}
+
+Vervolgens kan met de vermogensdichtheid het parkeffect berekend worden. Dit wordt gedaan met formule \ref{eq:11}. 
+
+\begin{equation} \label{eq:11}
+ Parkeffect_{18MW}=\frac{100-(\frac{n_{turbines}\times P_{turbine}}{A})}{100} = \frac{100-P_{totaal}}{100}
+\end{equation}
+\myequations{Berekening: Parkeffect 18MW Turbine}
+
+Het parkeffect varieert afhankelijk van de vermogensdichtheid. Deze is op zijn beurt weer afhankelijk van meerdere factoren. De berekende waardes van het parkeffect voor verschillende aantallen turbines staan in figuur \ref{fig:Parkeffect_table} is geplot in (figuur \ref{fig:ParkEffectGraph}). 
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=1\textwidth]{IMG/data/overzicht/Parkeffect.PNG}
+\caption{Gegevens: Aantal turbines, Parkeffect, Swept Area en Opbrengst park effect.}
+\label{fig:Parkeffect_table}
+\end{figure}
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.7\textwidth]{IMG/data/overzicht/parkeffect_graph.PNG}
+\caption{Plot: Parkeffect.}
+\label{fig:ParkEffectGraph}
+\end{figure}
+
+Ten slotte kan met het parkeffect het daadwerklijke vermogen bepaald worden. Dit kan berekend worden door het parkeffect te berekenen voor het aantal turbines dat op de kavel komt. In dit geval gaat het om 48 turbines. Dus is het parkeffect: 
+
+\begin{equation} \label{eq:12}
+ Parkeffect_{18MW} = \frac{100-(P_{totaal}/A)}{100} = \frac{100-(864/88)}{100} = 0,902 = 90,2\%
+\end{equation}
+\myequations{Berekening: Parkeffect 18MW Turbine doorgerekend}
+
+De jaarlijkse energieopbrengst inclusief het parkeffect is dan vrij simpel te berekenen met de formule: 
+% \begin{equation} \label{eq:6}
+% \text{Opbrengst 12MW kWh } t_{uren per jaar}\times VermogenPerWindsnelheid_{12MW}
+% \end{equation}
+% \begin{equation} \label{eq:7}
+% \text{Opbrengst 18MW kWh } t_{uren per jaar}\times VermogenPerWindsnelheid_{18MW}
+% \end{equation}
+
+
+\begin{equation} \label{13}
+\text{18MW Turbine: } OpbrengstParkeffect_{18MW}=Parkeffect_{18MW}\times E_{opbrengst,18MW} 
+\end{equation}
+\myequations{Berekening: Opbrengst Parkeffect 18MW Turbine}
+
+\begin{equation} \label{14}
+OpbrengstParkeffect_{18MW}=0,902\times 94850015 = 85.554.713kWh 
+\end{equation}
+\myequations{Berekening: Opbrengst Parkeffect 18MW Turbine}
+
+\subsection{Configuratie 2 (12MW)}
+Voor configuratie 2 zijn de meeste berekeningen al uitgevoerd bij configuratie 1. Ook is het verschil duidelijk te zien in de figuren en is voor elke formule het alternatief gegeven voor de turbine van configuratie 2. 
+
+De energieopbrengst inclusief parkeffect zal hieronder worden berekend voor de windturbine van 12MW. 
+
+\begin{equation} \label{eq:15}
+ Parkeffect_{12MW} = \frac{100-(P_{totaal}/A)}{100} = \frac{100-((60\times 12)/88)}{100} = 0,918 = 91,8\%
+\end{equation}
+\myequations{Berekening: Parkeffect 12MW Turbine doorgerekend}
+
+\begin{equation} \label{eq:16}
+OpbrengstParkeffect_{12MW}=Parkeffect_{12MW}\times E_{opbrengst,12MW}
+\end{equation}
+\myequations{Berekening: Opbrengst Parkeffect 12MW Turbine}
+
+\begin{equation} \label{eq:17}
+OpbrengstParkeffect_{12MW}= 0,918\times 53715367 = 49.320.473 kWh
+\end{equation}
+\myequations{Berekening: Opbrengst Parkeffect 12MW Turbine}
+
+Het verschil in jaarlijkse energieopbrengst, inclusief parkeffect, tussen de twee configuraties is dus \(85.554.713 - 49.320.473 = 36.234.240\) kWh aan energie per jaar. Dat is een zeer aanzienlijk getal. Dit is ook terug te zien in figuur \ref{fig:OpbrengstPark}
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.7\textwidth]{IMG/data/overzicht/OpbrengstPark_graph.PNG}
+\caption{Plot: OpbrengstPark.}
+\label{fig:OpbrengstPark}
+\end{figure}
+
+\subsection{Vergelijking Configuratie 1 en Configuratie 2}
+
+Bij het vergelijken van Configuratie 1 (18MW) met Configuratie 2 (12MW) zijn verschillende elektrotechnische aspecten van belang. 
+
+\subsubsection{Vermogensdichtheid}
+
+De vermogensdichtheid (\(P_{\text{dichtheid}}\)) van Configuratie 1 wordt berekend als:
+
+\[
+P_{\text{dichtheid18MW}} = \frac{{n_{\text{turbines}} \times P_{\text{turbine}}}}{{A_{\text{oppervlak}}}} = \frac{{48 \times 18}}{{88}} = 9,818 \, \text{MW/km}^2
+\]
+
+Voor Configuratie 2 is de vermogensdichtheid (\(P_{\text{dichtheid12MW}}\)):
+
+\[
+P_{\text{dichtheid12MW}} = \frac{{n_{\text{turbines}} \times P_{\text{turbine}}}}{{A_{\text{oppervlak}}}} = \frac{{60 \times 12}}{{88}} = 8,182 \, \text{MW/km}^2
+\]
+
+Hieruit blijkt dat Configuratie 1 een hogere vermogensdichtheid heeft, wat kan bijdragen aan een efficiëntere energieopwekking.
+
+\subsubsection{Parkeffect}
+
+Het parkeffect (\(P_{\text{effect}}\)) wordt berekend volgens Formule (11). Voor Configuratie 1:
+
+\[
+P_{\text{effect18MW}} = 100 - \left(\frac{{n_{\text{turbines} \times P_{\text{turbine}}}}}{{A}} \right) = 100 - \frac{{864}}{{88}} = 90,2\%
+\]
+
+Voor Configuratie 2:
+
+\[
+P_{\text{effect12MW}} = 100 - \left(\frac{{n_{\text{turbines}} \times P_{\text{turbine}}}}{{A}} \right) = 100 - \frac{{720}}{{88}} = 91,8\%
+\]
+
+Opmerkelijk is dat Configuratie 2 een hoger parkeffect heeft, wat kan wijzen op een efficiënter gebruik van de beschikbare ruimte.
+
+\subsubsection{Jaarlijkse Energieopbrengst}
+
+De jaarlijkse energieopbrengst wordt beïnvloed door zowel de vermogensdichtheid als het parkeffect. Voor Configuratie 1:
+
+\[
+\text{Opbrengst}_{\text{effect18MW}} = P_{\text{effect18MW}} \times \text{E}_{\text{opbrengst,18MW}} = 0,902 \times 85.554.713 \, \text{kWh} = 77.151.870 \, \text{kWh}
+\]
+
+Voor Configuratie 2:
+
+\[
+\text{Opbrengst}_{\text{effect12MW}} = P_{\text{effect12MW}} \times \text{E}_{\text{opbrengst,12MW}} = 0,918 \times 49.320.473 \, \text{kWh} = 45.255.460 \, \text{kWh}
+\]
+
+Hieruit blijkt dat Configuratie 1 een hogere jaarlijkse energieopbrengst heeft, wat suggereert dat het, ondanks een lager parkeffect, een efficiënter gebruik maakt van de beschikbare energiebron.
