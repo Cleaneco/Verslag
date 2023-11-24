@@ -1,5 +1,4 @@
-
-\section{Berekeningen}
+\section{Wat zijn de opbrengsten van het windpark?}
 \subsection{Algemene berekeningen}
 \subsubsection{Swept Area}
 Van de uitgekozen windturbines zijn meerdere gegevens verzameld, waaronder de diameter. Hiermee is het rotoroppervlakte (A(\(m^2\))) te berekenen zoals gedaan in formules \ref{eq:1} en \ref{eq:2}.
@@ -31,7 +30,7 @@ Met het rotoroppervlak van de turbines is het theoretische vermogen dat uit de w
 
 \subsubsection{Tussenberekeningen}
 De snelheid van de wind op de kavels is variërend, deze formules zijn dus toegepast voor realistische en te verwachten windsnelheden gebaseerd op de windgegevens over een periode van twintig jaar.\cite{WindData}
-De uitkomsten zijn in een tabel genoteerd en geplot zoals te zien in (figuur \ref{fig:TVUW}). In realiteit is dit theoretische vermogen niet volledig uit de wind te halen, er is namelijk sprake van het Betzlimiet. 
+De uitkomsten zijn in een tabel genoteerd en geplot zoals te zien in (figuur \ref{fig:TVUW}). In realiteit is dit theoretische vermogen niet volledig uit de wind te halen, er is namelijk sprake van het Betzlimiet.
 
 \begin{figure}[H]
 \centering
@@ -200,15 +199,17 @@ Bij het vergelijken van Configuratie 1 (18MW) met Configuratie 2 (12MW) zijn ver
 
 De vermogensdichtheid (\(P_{\text{dichtheid}}\)) van Configuratie 1 wordt berekend als:
 
-\[
+\begin{equation} \label{eq:18}
 P_{\text{dichtheid18MW}} = \frac{{n_{\text{turbines}} \times P_{\text{turbine}}}}{{A_{\text{oppervlak}}}} = \frac{{48 \times 18}}{{88}} = 9,818 \, \text{MW/km}^2
-\]
+\end{equation}
+\myequations{Berekening: Opbrengst Parkeffect 12MW Turbine}
 
 Voor Configuratie 2 is de vermogensdichtheid (\(P_{\text{dichtheid12MW}}\)):
 
-\[
+\begin{equation} \label{eq:19}
 P_{\text{dichtheid12MW}} = \frac{{n_{\text{turbines}} \times P_{\text{turbine}}}}{{A_{\text{oppervlak}}}} = \frac{{60 \times 12}}{{88}} = 8,182 \, \text{MW/km}^2
-\]
+\end{equation}
+\myequations{Berekening: Opbrengst Parkeffect 12MW Turbine}
 
 Hieruit blijkt dat Configuratie 1 een hogere vermogensdichtheid heeft, wat kan bijdragen aan een efficiëntere energieopwekking.
 
@@ -216,15 +217,17 @@ Hieruit blijkt dat Configuratie 1 een hogere vermogensdichtheid heeft, wat kan b
 
 Het parkeffect (\(P_{\text{effect}}\)) wordt berekend volgens Formule (11). Voor Configuratie 1:
 
-\[
+\begin{equation} \label{eq:20}
 P_{\text{effect18MW}} = 100 - \left(\frac{{n_{\text{turbines} \times P_{\text{turbine}}}}}{{A}} \right) = 100 - \frac{{864}}{{88}} = 90,2\%
-\]
+\end{equation}
+\myequations{Berekening: Opbrengst Parkeffect 12MW Turbine}
 
 Voor Configuratie 2:
 
-\[
+\begin{equation} \label{eq:21}
 P_{\text{effect12MW}} = 100 - \left(\frac{{n_{\text{turbines}} \times P_{\text{turbine}}}}{{A}} \right) = 100 - \frac{{720}}{{88}} = 91,8\%
-\]
+\end{equation}
+\myequations{Berekening: Opbrengst Parkeffect 12MW Turbine}
 
 Opmerkelijk is dat Configuratie 2 een hoger parkeffect heeft, wat kan wijzen op een efficiënter gebruik van de beschikbare ruimte.
 
@@ -232,14 +235,16 @@ Opmerkelijk is dat Configuratie 2 een hoger parkeffect heeft, wat kan wijzen op 
 
 De jaarlijkse energieopbrengst wordt beïnvloed door zowel de vermogensdichtheid als het parkeffect. Voor Configuratie 1:
 
-\[
+\begin{equation} \label{eq:22}
 \text{Opbrengst}_{\text{effect18MW}} = P_{\text{effect18MW}} \times \text{E}_{\text{opbrengst,18MW}} = 0,902 \times 85.554.713 \, \text{kWh} = 77.151.870 \, \text{kWh}
-\]
+\end{equation}
+\myequations{Berekening: Opbrengst Parkeffect 12MW Turbine}
 
 Voor Configuratie 2:
 
-\[
+\begin{equation} \label{eq:23}
 \text{Opbrengst}_{\text{effect12MW}} = P_{\text{effect12MW}} \times \text{E}_{\text{opbrengst,12MW}} = 0,918 \times 49.320.473 \, \text{kWh} = 45.255.460 \, \text{kWh}
-\]
+\end{equation}
+\myequations{Berekening: Opbrengst Parkeffect 12MW Turbine}
 
 Hieruit blijkt dat Configuratie 1 een hogere jaarlijkse energieopbrengst heeft, wat suggereert dat het, ondanks een lager parkeffect, een efficiënter gebruik maakt van de beschikbare energiebron.
