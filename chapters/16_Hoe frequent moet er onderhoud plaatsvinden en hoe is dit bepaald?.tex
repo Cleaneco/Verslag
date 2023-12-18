@@ -1,7 +1,180 @@
+% \section{Hoe frequent moet er onderhoud plaatsvinden en hoe is dit bepaald?}
+
+% De frequentie van onderhoud hangt af van verschillende factoren, waaronder de omgevingsomstandigheden, de levensduur van componenten en de mate van slijtage. Klein onderhoud, dat minder tijdrovend is, kan meerdere keren per jaar plaatsvinden, afhankelijk van de behoeften en staat van de turbines \cite{Eneco_presentatie}.
+
+% Groot onderhoud, dat complexer is en grootschaliger planning vereist, wordt minder vaak uitgevoerd, mogelijk op jaarlijkse of tweejaarlijkse basis. De planning van groot onderhoud wordt vaak gebaseerd op de verwachte levensduur van kritieke componenten en de prestaties van de windturbine \cite{Eneco_presentatie}.
+
+% Inspecties van bladen en kabels kunnen regelmatig zijn, vaak op jaarlijkse of halfjaarlijkse basis. Deze frequentie kan variëren afhankelijk van factoren zoals de zeeomstandigheden, mate van slijtage en de resultaten van eerdere inspecties. Het doel is om potentiële problemen vroegtijdig te identificeren en tijdig te interveniëren om grotere schade te voorkomen \cite{Eneco_presentatie}.
+
+
+
+
 \section{Hoe frequent moet er onderhoud plaatsvinden en hoe is dit bepaald?}
 
-De frequentie van onderhoud hangt af van verschillende factoren, waaronder de omgevingsomstandigheden, de levensduur van componenten en de mate van slijtage. Klein onderhoud, dat minder tijdrovend is, kan meerdere keren per jaar plaatsvinden, afhankelijk van de behoeften en staat van de turbines \cite{Eneco_presentatie}.
+De frequentie van onderhoud voor windturbines wordt bepaald door een reeks variabelen, zoals omgevingsvoorwaarden, componentlevensduur en slijtagegraad. Door het ontbreken van een tandwielkast in direct aandrijfsystemen, zoals in onze turbine, is de noodzaak voor regulier onderhoud verminderd \cite{Eneco_presentatie}.
 
-Groot onderhoud, dat complexer is en grootschaliger planning vereist, wordt minder vaak uitgevoerd, mogelijk op jaarlijkse of tweejaarlijkse basis. De planning van groot onderhoud wordt vaak gebaseerd op de verwachte levensduur van kritieke componenten en de prestaties van de windturbine \cite{Eneco_presentatie}.
+Voor regulier klein onderhoud, dat over het algemeen minder tijdrovend is, zou een schema van verscheidene onderhoudsmomenten per jaar geïndiceerd kunnen zijn, gebaseerd op de specifieke behoeften en conditie van de turbines.
 
-Inspecties van bladen en kabels kunnen regelmatig zijn, vaak op jaarlijkse of halfjaarlijkse basis. Deze frequentie kan variëren afhankelijk van factoren zoals de zeeomstandigheden, mate van slijtage en de resultaten van eerdere inspecties. Het doel is om potentiële problemen vroegtijdig te identificeren en tijdig te interveniëren om grotere schade te voorkomen \cite{Eneco_presentatie}.
+Het uitvoeren van groot onderhoud, dat ingrijpender is en uitgebreidere planning vereist, gebeurt minder frequent, mogelijk jaarlijks of om de twee jaar. De strategie voor groot onderhoud steunt overwegend op fabrikantsspecificaties aangaande de verwachte levensduur van kritieke componenten alsmede operationele prestatie-indicatoren van de turbine \cite{Eneco_presentatie}.
+
+Inspecties van rotorbladen en kabels zijn doorgaans periodiek en vinden vaak op jaar- of halfjaarbasis plaats. Deze frequentie is onderhevig aan factoren als zeeomstandigheden, de slijtagegraad en inzichten verkregen uit voorafgaande inspecties, met als doel het tijdig herkennen van mogelijke gebreken om zodoende ernstigere schade te vermijden \cite{Eneco_presentatie}.
+
+Een diepgaande analyse van het falen van systemen kan inzicht geven in de benodigde onderhoudsfrequentie. Een studie naar de uitval van windturbinesystemen, zoals gepresenteerd in Windstats data, biedt daartoe waardevolle informatie \cite{ding2010comparative}. Tabel \ref{tab:failure-data} toont het aantal gefaalde onderdelen van windturbine subsystemen over een bepaalde periode.
+
+\begin{table}[h]
+    \centering
+    \begin{tabular}{|l|c|c|c|c|}
+        \hline
+        \multicolumn{5}{|c|}{\textbf{Statistieken Turbines uitval}} \\
+        \hline
+        \textbf{Periode} & \textbf{Dec. 08} & \textbf{Mar. 09} & \textbf{Jun. 09} & \textbf{Sep. 09} \\
+        \hline
+        Aantal turbines dat rapporteert & 4924 & 5186 & 4767 & 4869 \\
+        \hline
+        Aantal fouten in subassemblages: & & & & \\
+        - Gehele unit & 3 & 1 & 2 & 3 \\
+        - Rotor & 9 & 9 & 9 & 12 \\
+        - Lucht rem & 4 & 1 & 1 & 5 \\
+        - Mechanische rem & 0 & 2 & 3 & 3 \\
+        - Pitch aanpassing & 16 & 7 & 7 & 19 \\
+        - Hoofdas/lager & 8 & 5 & 5 & 3 \\
+        - Versnellingsbak & 37 & 15 & 12 & 22 \\
+        - Generator & 15 & 16 & 17 & 16 \\
+        - Yaw systeem & 11 & 14 & 14 & 9 \\
+        - Windvaan/windmeter & 7 & 4 & 3 & 2 \\
+        - Elektronische controle & 5 & 10 & 7 & 8 \\
+        - Elektronische systemen & 47 & 36 & 39 & 58 \\
+        - Hydroliek & 25 & 8 & 6 & 15 \\
+        - Sensoren & 9 & 9 & 5 & 10 \\
+        - Overige & 9 & 6 & 3 & 9 \\
+        \hline
+        Totaal & 206 & 144 & 136 & 196 \\
+        \hline
+    \end{tabular}
+    \caption{Statistieken Turbines uitval\cite{ding2010comparative}}
+    \label{tab:failure-data}
+\end{table}
+
+Deze gegevens tonen het aantal uitvalmomenten per component in een kwartaal. Door rekening te houden met het aantal turbines in de gegeven periode, kan de gemiddelde uitvalfrequentie per jaar voor elk component worden berekend. Deze informatie is cruciaal voor het bepalen van de onderhoudsintervallen en het optimaliseren van het onderhoudsproces voor windturbines \cite{ding2010comparative}.
+
+\subsection{Onderhoudsoptimalisatie en Faalratio}
+
+In het volgende hoofdstuk wordt een optimalisatie van correctief onderhoud weergegeven, waarbij uitgegaan wordt van een gemiddelde uitvalfrequentie van componenten, zoals geïdentificeerd in Tabel \ref{tab:failure-rate}.
+
+\begin{table}[h]
+    \centering
+    \begin{tabular}{|l|c|}
+        \hline
+        \textbf{Componenten} & \textbf{Gemiddeld uitvalpercentage $\lambda$ over Oct.08~Sep.09} \\
+        \hline
+        Gehele unit & 0.18\% \\
+        Rotor & 0.79\% \\
+        Lucht rem & 0.22\% \\
+        Mechanische rem & 0.16\% \\
+        Pitch aanpassing & 1.00\% \\
+        Hoofdas/lager & 0.43\% \\
+        Versnellingsbak & 1.74\% \\
+        Generator & 1.30\% \\
+        Yaw systeem & 0.97\% \\
+        Windvaan/windmeter & 0.32\% \\
+        Elektronische controle & 0.61\% \\
+        Elektronische systemen & 3.66\% \\
+        Hydroliek & 1.10\% \\
+        Sensoren & 0.67\% \\
+        Overige & 0.55\% \\
+        \hline
+        Totaal & 13.84\% \\
+        \hline
+    \end{tabular}
+    \caption{Gemiddeld uitvalpercentage $\lambda$ over Oct.08~Sep.09 \cite{ding2010comparative}}
+    \label{tab:failure-rate}
+\end{table}
+
+Door gebruik te maken van deze faalratio's kunnen onderhoudsplannen worden afgestemd om zo de operationele betrouwbaarheid en efficiëntie van windturbines te maximaliseren. De berekening van de gemiddelde faalratio's is gebaseerd op de methodiek zoals aangegeven in vergelijking 4-1 en 4-2 van \cite{ding2010comparative}, gericht op het reduceren van de jaarlijkse faalratio van turbinesystemen.
+
+\subsection{Onderhoudsstrategie komende 25 jaar}
+Groot onderhoud is ontworpen om specifieke componenten en systemen periodiek te vervangen om een optimale werking van het windpark te waarborgen. In dit aangepaste schema is groot onderhoud geïntegreerd op regelmatige intervallen, zoals de vervanging van elektronische systemen, controle- en bewakingssystemen, en structurele reparaties aan de monopalen. Deze strategische aanpak minimaliseert de kans op uitval en zorgt ervoor dat het windpark gedurende de komende 25 jaar consistent betrouwbaar en efficiënt blijft functioneren.
+
+
+\begin{table}[H]
+\resizebox{\textwidth}{!}{
+\begin{tabular}{|c|c|c|}
+\hline
+Jaar & Onderhoudsactiviteiten & Geschatte downtime \\
+\hline
+1 & Bladreparaties & 1 dag \\
+  & Klein onderhoud (algemene inspectie, software-updates, etc.) & 4 uur per turbine \\
+\hline
+2 & Klein onderhoud (schoonmaken, smeren, bouten/moeren checken, etc.) & 4 uur per turbine \\
+  & \cellcolor{gray!25} \textbf{Groot onderhoud (volledige inspectie, reparatie en vervanging indien nodig)} & \cellcolor{gray!25} \textbf{7 dagen} \\
+\hline
+3 & Klein onderhoud (schoonmaken, smeren, bouten/moeren checken, etc.) & 4 uur per turbine \\
+\hline
+4 & Inter array bekabeling (inspectie) & 2 dagen \\
+  & Klein onderhoud (schoonmaken van elektrische componenten, inspectie) & 4 uur per turbine \\
+\hline
+5 & Klein onderhoud (schoonmaken, smeren, bouten/moeren checken, etc.) & 4 uur per turbine \\
+  & \cellcolor{gray!25} \textbf{Groot onderhoud (volledige inspectie, reparatie en vervanging indien nodig)} & \cellcolor{gray!25} \textbf{7 dagen} \\
+\hline
+6 & Generatoren & 5 dagen \\
+  & Klein onderhoud (inspectie elektronische componenten, smeren, etc.) & 4 uur per turbine \\
+\hline
+7 & Klein onderhoud (schoonmaken, smeren, bouten/moeren checken, etc.) & 4 uur per turbine \\
+\hline
+8 & Klein onderhoud (schoonmaken, smeren, bouten/moeren checken, etc.) & 4 uur per turbine \\
+  & \cellcolor{gray!25} \textbf{Groot onderhoud (volledige inspectie, reparatie en vervanging indien nodig)} & \cellcolor{gray!25} \textbf{7 dagen} \\
+\hline
+9 & Rotorbladen (uitgebreide inspectie) & 3 dagen \\
+  & Klein onderhoud (schoonmaken, smeren, bouten/moeren checken, etc.) & 4 uur per turbine \\
+\hline
+10 & Klein onderhoud (schoonmaken, smeren, bouten/moeren checken, etc.) & 4 uur per turbine \\
+  & \cellcolor{gray!25} \textbf{Groot onderhoud (volledige inspectie, reparatie en vervanging indien nodig)} & \cellcolor{gray!25} \textbf{7 dagen} \\
+\hline
+11 & Klein onderhoud (schoonmaken, smeren, bouten/moeren checken, etc.) & 4 uur per turbine \\
+\hline
+12 & Nacelle elektronica & 4 dagen \\
+   & \cellcolor{gray!25} \textbf{Groot onderhoud (volledige vervanging van elektronische systemen)} & \cellcolor{gray!25} \textbf{7 dagen} \\
+   & Klein onderhoud (inspectie elektronische componenten, smeren, etc.) & 4 uur per turbine \\
+\hline
+13 & Klein onderhoud (schoonmaken, smeren, bouten/moeren checken, etc.) & 4 uur per turbine \\
+  & \cellcolor{gray!25} \textbf{Groot onderhoud (volledige inspectie, reparatie en vervanging indien nodig)} & \cellcolor{gray!25} \textbf{7 dagen} \\
+\hline
+14 & Klein onderhoud (schoonmaken, smeren, bouten/moeren checken, etc.) & 4 uur per turbine \\
+\hline
+15 & Export kabels (inspectie) & 2 dagen \\
+   & Klein onderhoud (inspectie en schoonmaken van kabelaansluitingen) & 4 uur per turbine \\
+\hline
+16 & Klein onderhoud (schoonmaken, smeren, bouten/moeren checken, etc.) & 4 uur per turbine \\
+  & \cellcolor{gray!25} \textbf{Groot onderhoud (volledige inspectie, reparatie en vervanging indien nodig)} & \cellcolor{gray!25} \textbf{7 dagen} \\
+\hline
+17 & Klein onderhoud (schoonmaken, smeren, bouten/moeren checken, etc.) & 4 uur per turbine \\
+\hline
+18 & Controle- en bewakingssystemen & 4 dagen \\
+   & \cellcolor{gray!25} \textbf{Groot onderhoud (vervanging van controle- en bewakingssystemen)} & \cellcolor{gray!25} \textbf{7 dagen} \\
+   & Klein onderhoud (inspectie elektronische componenten, smeren, etc.) & 4 uur per turbine \\
+\hline
+19 & Klein onderhoud (schoonmaken, smeren, bouten/moeren checken, etc.) & 4 uur per turbine \\
+  & \cellcolor{gray!25} \textbf{Groot onderhoud (volledige inspectie, reparatie en vervanging indien nodig)} & \cellcolor{gray!25} \textbf{7 dagen} \\
+\hline
+20 & Klein onderhoud (schoonmaken, smeren, bouten/moeren checken, etc.) & 4 uur per turbine \\
+\hline
+21 & Monopalen (structurele inspectie) & 3 dagen \\
+   & \cellcolor{gray!25} \textbf{Groot onderhoud (structurele reparaties en vervanging)} & \cellcolor{gray!25} \textbf{7 dagen} \\
+   & Klein onderhoud (inspectie, smeren, etc.) & 4 uur per turbine \\
+\hline
+22 & Klein onderhoud (schoonmaken, smeren, bouten/moeren checken, etc.) & 4 uur per turbine \\
+\hline
+23 & Klein onderhoud (schoonmaken, smeren, bouten/moeren checken, etc.) & 4 uur per turbine \\
+  & \cellcolor{gray!25} \textbf{Groot onderhoud (volledige inspectie, reparatie en vervanging indien nodig)} & \cellcolor{gray!25} \textbf{7 dagen} \\
+\hline
+24 & Kabelknooppunten (inspectie) & 2 dagen \\
+   & Klein onderhoud (inspectie en schoonmaken van kabelaansluitingen) & 4 uur per turbine \\
+\hline
+25 & Klein onderhoud (schoonmaken, smeren, bouten/moeren checken, etc.) & 4 uur per turbine \\
+  & \cellcolor{gray!25} \textbf{Groot onderhoud (volledige inspectie, reparatie en vervanging indien nodig)} & \cellcolor{gray!25} \textbf{7 dagen} \\
+\hline
+\end{tabular}
+}
+\caption{Onderhoudsschema voor de komende 25 jaar met groot onderhoud om de twee jaar.}
+\label{tab:onderhoudsschema}
+\end{table}

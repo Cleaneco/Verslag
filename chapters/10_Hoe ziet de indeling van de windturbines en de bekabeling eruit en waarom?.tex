@@ -1,15 +1,15 @@
 \section{Indeling van Windturbines en Bekabeling}
 \subsection{Kavelindeling}
-Voor de kavelindeling is er gekozen voor 48 turbines per kavel, omdat dit het maximale bereik van onze swept area is. Het maximale oppervlak volgens het kavelbesluit is vastgesteld op 2624613 m\textsuperscript{2}, en met 48 turbines wordt 2607609,87 m\textsuperscript{2} beslagen. Elke turbine bestrijkt een oppervlakte van 54325,20556 m\textsuperscript{2}, berekend met de formule:
+Voor de kavelindeling is er gekozen voor 48 turbines per kavel, omdat dit het maximale bereik van onze swept area is. Het maximale oppervlak volgens het kavelbesluit is vastgesteld op 2624613 m\textsuperscript{2}, en met 48 turbines wordt 2607609,87 m\textsuperscript{2} beslagen. Elke turbine heeft een oppervlakte van 54325,21 m\textsuperscript{2}, berekend met de formule:
 
 \begin{equation} \label{eq:25}
 \text{{Swept area per turbine}} = \pi \left(\frac{{\text{{Rotor diameter (m)}}}}{2}\right)^2
 \end{equation}
 \myequations{Berekening: Swept area per turbine}
 
-waarbij de rotor diameter gelijk is aan 263 m volgens de datasheet van NREL 18MW.
+Waarbij de rotor diameter gelijk is aan 263 m volgens de datasheet van NREL 18MW.\cite{NREL_turbine_documentatie}
 
-De plaatsing van turbines is zo gedaan dat alle obstakels in figuur \ref{fig:windparkitems} worden vermeden. Ook zijn er een aantal objecten verwijderd (zie figuur \ref{tab:removed-items} om ruimte te maken voor de turbines met bekabeling.
+De plaatsing van turbines is zo gedaan dat alle obstakels in figuur \ref{fig:windparkitems} worden vermeden. Ook zijn er een aantal objecten verwijderd (zie figuur \ref{fig:windparkturbines} om ruimte te maken voor de turbines met bekabeling.
 \begin{table}[h]
     \centering
     \begin{tabular}{|c|c|}
@@ -37,7 +37,7 @@ De plaatsing van turbines is zo gedaan dat alle obstakels in figuur \ref{fig:win
     \label{tab:removed-items}
 \end{table}
 
-De turbine-plaatsing is ontworpen met voldoende ruimte tussen de turbines om het lager park effect te minimaliseren. De configuratie van de 48 turbines per kavel is te zien in is in figuur \ref{fig:windparkturbines}.
+De turbine-plaatsing is ontworpen met voldoende ruimte tussen de turbines om het parkeffect te minimaliseren. De configuratie van de 48 turbines per kavel is te zien in figuur \ref{fig:windparkturbines}.
 \begin{figure}[h]
     \centering
     \begin{subfigure}{0.5\textwidth}
@@ -60,19 +60,19 @@ De turbine-plaatsing is ontworpen met voldoende ruimte tussen de turbines om het
 
 
 \subsection{Bekabeling en Vermogen}
-De gekozen ABB-kabel is ontworpen voor 66 kV (66000 V). Volgens de datasheet van ABB kan deze kabel maximaal 825 ampère overbrengen. Elke turbine levert een vermogen van 18 MW. De formule voor het berekenen van het maximale vermogen per kabel is:
+De tijdelijk gekozen ABB-kabel is ontworpen voor 66 kV (66000 V). Volgens de datasheet van ABB kan deze kabel maximaal 825 ampère overbrengen.\cite{Kabel_ABB} Elke turbine levert een vermogen van 18 MW. De formule voor het berekenen van het maximale vermogen per kabel is:
 
 \begin{equation} \label{eq:26}
 \text{{Maximaal vermogen per kabel}} = \left(\frac{{\text{{Spanning}}}}{{\sqrt{3}}}\right) \times 3 \times \text{{Stroom}} \times \text{{Formfactor}}
 \end{equation} \myequations{Berekening: Maximaal vermogen per kabel}
 
-Met een veiligheidsfactor (formfactor) van 0,77 wordt dit:
+Met een formfactor van 0,85 wordt dit:
 
 \begin{equation} \label{eq:27}
-\left(\frac{{66000}}{{\sqrt{3}}}\right) \times 3 \times 825 \times 0,77 = 72618828,18
+\left(\frac{{66000}}{{\sqrt{3}}}\right) \times 3 \times 825 \times 0,85 = 80.163.641,50 Watt
 \end{equation} \myequations{Berekening: Veiligheidsfactor}
 
-Dit is het maximale vermogen dat er per kabel/tak kunnen doorsturen. Door de formule \(\frac{{\text{{Turbine MW}}}}{{\text{{Tak MW}}}}\) toe te passen, vinden we dat we veilig 4 turbines per kabel naar het TenneT-station kunnen verbinden.
+Dit is het maximale vermogen dat er per kabel/tak kan worden getransporteerd. Door de formule \(\frac{{\text{{Turbine MW}}}}{{\text{{Tak MW}}}}\) toe te passen, word verkregen dat veilig 4 turbines per kabel naar het TenneT-station kunnen worden verbonden.
 
 De bekabeling is weergegeven in figuur \ref{fig:windparktotaal}.
 
@@ -85,25 +85,25 @@ De bekabeling is weergegeven in figuur \ref{fig:windparktotaal}.
 \end{figure}
 
 \subsection{Lengte en Kenmerken van Kabels}
-Volgens de heer Dhirhadj Djairam kan elke tak beschouwen worden als één kabel. Door alle lengtes op te tellen, is het mogelijk om de weerstanden, capaciteiten en inducties van de kabels van kavel VI en VII berekenen. De specifieke weerstand van de kabel wordt bepaald door de formule:
+Volgens de heer Dhirhadj Djairam kan elke tak beschouwd worden als één kabel. Door alle lengtes op te tellen, is het mogelijk om de weerstanden, capaciteiten en inducties van de kabels van kavel VI en VII berekenen. De specifieke weerstand van de kabel wordt bepaald door de formule:
 
 \begin{equation} \label{eq:28}
-\text{{Specifieke weerstand kabel}} = \frac{{\text{{Lengte kabel}} \times \text{{Specifieke weerstand per km}}}}{{\text{{Doorsnede kabel}}}}
+\text{{Weerstand kabel}} = \frac{{\text{{Lengte kabel}} \times \text{{Soortelijke weerstand}}}}{{\text{{Doorsnede kabel}}}}
 \end{equation} \myequations{Berekening: Specifieke weerstand kabel}
 
-De capaciteit van de kabel wordt gegeven door:
+De capaciteit van de kabel wordt gegeven door\cite{Kabel_ABB}:
 
 \begin{equation} \label{eq:29}
 \text{{Capaciteit kabel}} = \text{{Lengte kabel}} \times \text{{Capaciteit per km}}
 \end{equation} \myequations{Berekening: Capaciteit kabel}
 
-En de inductie van de kabel is:
+En de inductie van de kabel is\cite{Kabel_ABB}:
 
 \begin{equation} \label{eq:30}
 \text{{Inductie kabel}} = \text{{Lengte kabel}} \times \text{{Inductie per km}}
 \end{equation} \myequations{Berekening: Inductie kabel}
 
-Door deze formules toe te passen, kan de gegevens voor kabel VI en VII worden ingevuld, weergegeven in tabel \ref{tab:Kavel VI - Kabel data} en tabel \ref{tab:Kavel VII - Kabel data}.
+Door deze formules toe te passen, kunnen de gegevens voor kabel VI en VII worden ingevuld, weergegeven in tabel \ref{tab:Kavel VI - Kabel data} en tabel \ref{tab:Kavel VII - Kabel data}.
 
 \begin{table}[h]
 \resizebox{\textwidth}{!}{
@@ -142,7 +142,7 @@ Door deze formules toe te passen, kan de gegevens voor kabel VI en VII worden in
   \multicolumn{1}{l|}{\cellcolor[HTML]{FFFFFF}3,72} &
   5,88 \\ \hline
 \rowcolor[HTML]{EFEFEF} 
-\multicolumn{1}{|l|}{\cellcolor[HTML]{EFEFEF}\textbf{Weerstand} {[}\textit{ohm}{]}} &
+\multicolumn{1}{|l|}{\cellcolor[HTML]{EFEFEF}\textbf{Weerstand} {[}\textit{\(\Omega\)}{]}} &
   \multicolumn{1}{l|}{\cellcolor[HTML]{EDEDED}0,09} &
   \multicolumn{1}{l|}{\cellcolor[HTML]{EDEDED}0,09} &
   \multicolumn{1}{l|}{\cellcolor[HTML]{EDEDED}0,02} &
@@ -232,7 +232,7 @@ Door deze formules toe te passen, kan de gegevens voor kabel VI en VII worden in
   \multicolumn{1}{l|}{\cellcolor[HTML]{FFFFFF}3,82} &
   1,13 \\ \hline
 \rowcolor[HTML]{EFEFEF} 
-\multicolumn{1}{|l|}{\cellcolor[HTML]{EFEFEF}\textbf{Weerstand} {[}\textit{ohm}{]}} &
+\multicolumn{1}{|l|}{\cellcolor[HTML]{EFEFEF}\textbf{Weerstand} {[}\textit{\(\Omega\)}{]}} &
   \multicolumn{1}{l|}{\cellcolor[HTML]{EFEFEF}0,11} &
   \multicolumn{1}{l|}{\cellcolor[HTML]{EFEFEF}0,09} &
   \multicolumn{1}{l|}{\cellcolor[HTML]{EFEFEF}0,10} &
